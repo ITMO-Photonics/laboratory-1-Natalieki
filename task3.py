@@ -1,15 +1,15 @@
-import scipy.linalg as sl
+import scipy.linalg
 import numpy as np
 
-N=20
-A=np.zeros((N,N)) 
-i,j=np.indices(A.shape) 
+A=np.zeros((15,15))
+i,j=np.indices(A.shape)
 
 A[i==j]=1
 A[i==j+1]=1
 A[i==j+2]=1
 
-B=np.arange(N)
+print (A);
+B=np.arange(15)
 C=np.linalg.solve(A,B)
-
-print (C);
+print (B)
+print (C)
